@@ -1,6 +1,7 @@
 * {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
 body {
@@ -8,9 +9,9 @@ body {
 }
 
 #hero {
-  height: 800px;
+  height: 300px;
   width: 100%;
-  margin-bottom: 25px;
+  /* margin-bottom: 25px; */
   background-image: url("../images/watch.jpg");
   background-size: cover;
   background-position: center;
@@ -19,6 +20,51 @@ body {
 header {
   height: 100px;
   background-color: red;
+}
+
+#about-me {
+  background-color: #bbb;
+  height: 300px;
+}
+
+#works {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  width: 80%;
+  background-color: green;
+  justify-content: center;
+}
+
+#work-large {
+  background-color: turquoise;
+  /* margin: 2em; */
+  float: left;
+  height: 100px;
+  width: 80%;
+}
+
+.work {
+  height:100px;
+  background-color: blue;
+  padding: 1em;
+  width: 40%;
+}
+
+#work-2 {
+  background-color: hotpink;
+}
+
+#work-3 {
+  background-color: burlywood;
+}
+
+#work-4 {
+  background-color: orangered;
+}
+
+#work-5 {
+  background-color: yellowgreen;
 }
 
 footer {
