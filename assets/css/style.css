@@ -52,10 +52,9 @@ nav a {
 .main {
 padding:10px;
 flex:4;
-
 }
 
-.about-me {
+.about {
   background-color: rgb(250, 250, 175);
 } 
 
@@ -92,12 +91,12 @@ width: 100%;
 #work-2, #work-3, #work-4, #work-5 {
   background-color: wheat;
   height: 100px;
-  flex: 1 1 300px;
+  flex: 1 0 200px;
   margin:20px;
   border: 10px solid black;
 }
 
-.contact-me {
+.contact {
   background-color: pink;
 }
 
@@ -110,4 +109,42 @@ footer {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
   color: #000000;
+}
+
+
+/* MEDIA QUERIES */
+
+@media only screen and (min-width:972px) {
+
+  #work-2, #work-3, #work-4, #work-5 {
+    background-color: wheat;
+    height: 100px;
+    flex: 1 0 125px;
+    margin:20px;
+    border: 10px solid black;
+  }
+}
+
+  @media only screen and (max-width:550px) {
+    #work-1, #work-2, #work-3, #work-4, #work-5 {
+      flex: 1 0 200px;
+    }
+
+    h2 {
+      font-size: .85rem;
+    }
+    .aside {
+      flex:1;
+    }
+    
+    .main {
+    flex:3;
+    }
+
+  }
+
+  @media only screen and (max-width:390px) {
+      #work-1, #work-2, #work-3, #work-4, #work-5 {
+        flex: 0 1 200px;
+      }
 }
