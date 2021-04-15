@@ -1,71 +1,106 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
 }
 
 body {
-
-}
-
-#hero {
-  height: 300px;
-  width: 100%;
-  /* margin-bottom: 25px; */
-  background-image: url("../images/watch.jpg");
-  background-size: cover;
-  background-position: center;
+  font-family: Arial;
+  /* margin: 0; */
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: rgba(99, 252, 188, .3);
 }
 
 header {
-  height: 100px;
+  height: 50px;
   background-color: red;
 }
 
-#about-me {
-  background-color: #bbb;
-  height: 300px;
+nav ul {
+  list-style: none;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-end;
 }
 
-#works {
+nav a {
+  color: #13293d;
+  padding: 14px 20px;
+  text-decoration: none;
+  text-align: center;
+}
+
+#hero {
+  height: 80px;
+  width: 100%;
+  background-image: url("../images/watch.jpg");
+  background-size: cover;
+  background-position: center;
+} 
+
+.flex-container {
+  display: flex;
+  padding:10px;
+}
+
+.aside {
+  padding:10px;
+  flex:1;
+  border-right: 2px solid blue;
+}
+
+.main {
+padding:10px;
+flex:4;
+
+}
+
+.about-me {
+  background-color: rgb(250, 250, 175);
+} 
+
+.works {
+  background-color: paleturquoise;
+}
+
+.works-flex-container {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
-  width: 80%;
-  background-color: green;
-  justify-content: center;
 }
 
-#work-large {
-  background-color: turquoise;
-  /* margin: 2em; */
-  float: left;
+#works-flex-container-top {
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
+
+#works-flex-container-bottom {
+display: flex;
+flex-wrap: wrap;
+width: 100%;
+}
+
+#work-1 {
+  background-color: wheat;
+  height: 250px;
+  width:100%;
+  margin:20px;
+  border: 10px solid black;
+}
+
+#work-2, #work-3, #work-4, #work-5 {
+  background-color: wheat;
   height: 100px;
-  width: 80%;
+  flex: 1 1 300px;
+  margin:20px;
+  border: 10px solid black;
 }
 
-.work {
-  height:100px;
-  background-color: blue;
-  padding: 1em;
-  width: 40%;
+.contact-me {
+  background-color: pink;
 }
 
-#work-2 {
-  background-color: hotpink;
-}
-
-#work-3 {
-  background-color: burlywood;
-}
-
-#work-4 {
-  background-color: orangered;
-}
-
-#work-5 {
-  background-color: yellowgreen;
-}
 
 footer {
   height: 100px;
