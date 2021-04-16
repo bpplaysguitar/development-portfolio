@@ -8,26 +8,35 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: rgba(99, 252, 188, .3);
 }
 
 header {
   height: 50px;
-  background-color: red;
+  background-color: #ffadad;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
 }
 
 nav ul {
   list-style: none;
   display: flex;
-  flex-direction: row;
-  justify-content: flex-end;
 }
 
 nav a {
-  color: #13293d;
-  padding: 14px 20px;
+  color: #000;
+  padding: 10px 25px;
   text-decoration: none;
   text-align: center;
+  font-weight: 600;
+  border-radius: 10px;
+
+}
+
+nav a:hover {
+  color: #fff;
+  background-color: #BDB2FF;
+  transition: all .2s ease;
 }
 
 #hero {
@@ -48,7 +57,7 @@ nav a {
   justify-content: flex-end;
   padding:5px 15px 0px 15px;
   flex:1;
-  border-right: 2px solid blue;
+  border-right: 3px solid #000;
 }
 
 .main {
@@ -57,11 +66,11 @@ nav a {
 }
 
 #about {
-  background-color: rgb(250, 250, 175);
+  background-color:#fdffb6;
 } 
 
 #works {
-  background-color: paleturquoise;
+  background-color: #9bf6ff;
 }
 
 .works-flex-container {
@@ -87,25 +96,31 @@ width: 100%;
   height: 250px;
   width:100%;
   margin:20px;
-  border: 10px solid black;
+  border: 6px solid #000;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 3px 3px 2px #aaa;
 }
 
-#work-2, #work-3, #work-4, #work-5 {
+.work-small {
+  text-align: center;
   background-color: wheat;
   height: 100px;
   flex: 1 0 200px;
   margin:20px;
-  border: 10px solid black;
+  border: 6px solid #000;
+  border-radius: 20px;
+  box-shadow: 2px 2px 2px #aaa;
 }
 
 #contact {
-  background-color: pink;
+  background-color: #ffc6ff;
 }
 
 
 footer {
   height: 100px;
-  background-color: red;
+  background-color: #caffbf;
   padding: 30px;
   clear: both;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
