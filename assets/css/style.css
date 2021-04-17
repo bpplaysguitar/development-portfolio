@@ -2,17 +2,34 @@
   box-sizing: border-box;
 }
 
+:root {
+  --adidas--grey: hsl(337, 0%, 73%);
+  --adidas--green: hsl(175, 66%, 76%);
+  --adidas--purple: hsl(296, 36%, 40%);
+  --adidas--dark--grey: hsl(337, 0%, 63%);
+  --adidas--black: hsl(300, 0%, 15%);
+  --adidas--dark--purple:hsl(276, 47%, 23%);
+  --adidas--white: hsl(255, 45%, 98%);
+}
+
 body {
   font-family: Arial;
-  /* margin: 0; */
   display: flex;
   flex-direction: column;
   min-height: 100vh;
 }
 
+h1 {
+  font-size:2rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+}
+
 header {
-  height: 50px;
-  background-color: #ffadad;
+  height: 60px;
+  background-color: var(--adidas--black);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -21,31 +38,41 @@ header {
 nav ul {
   list-style: none;
   display: flex;
+  position: relative;
+  right: 30px;
 }
 
 nav a {
-  color: #000;
+  color: var(--adidas--white);
   padding: 10px 25px;
   text-decoration: none;
   text-align: center;
   font-weight: 600;
   border-radius: 10px;
-
 }
 
 nav a:hover {
-  color: #fff;
-  background-color: #BDB2FF;
+  background-color: var(--adidas--purple);
   transition: all .2s ease;
+  cursor:pointer;
 }
 
 #hero {
-  height: 80px;
+  position: relative;
+  height: 400px;
   width: 100%;
-  background-image: url("../images/watch.jpg");
+  background-image: url("../images/glitchbp.jpg");
   background-size: cover;
-  background-position: center;
+  /* background-position: center; */
+  background-repeat:no-repeat;
+  background-position-y:25%;
 } 
+
+#hero h1 {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  }
 
 .flex-container {
   display: flex;
@@ -57,20 +84,22 @@ nav a:hover {
   justify-content: flex-end;
   padding:5px 15px 0px 15px;
   flex:1;
-  border-right: 3px solid #000;
+  border-right: 4px solid var(--adidas--green);
 }
 
 .main {
   padding:0px 15px 0px 15px;
-  flex:5;
+  flex:6;
 }
 
 #about {
-  background-color:#fdffb6;
+  background-color:var(--adidas--purple);
+  color: var(--adidas--white);
 } 
 
 #works {
-  background-color: #9bf6ff;
+  background-color: var(--adidas--grey);
+  color: var(--adidas--black);
 }
 
 .works-flex-container {
@@ -92,40 +121,41 @@ width: 100%;
 }
 
 #work-1 {
-  background-color: wheat;
+  background-color: #aaa;
   height: 250px;
   width:100%;
   margin:20px;
-  border: 6px solid #000;
+  border: 6px solid var(--adidas--black);
   border-radius: 20px;
   text-align: center;
-  box-shadow: 3px 3px 2px #aaa;
+  box-shadow: 3px 3px 2px var(--adidas--dark--grey);
 }
 
 .work-small {
   text-align: center;
-  background-color: wheat;
+  background-color: #aaa;
   height: 100px;
   flex: 1 0 200px;
   margin:20px;
-  border: 6px solid #000;
+  border: 6px solid var(--adidas--black);
   border-radius: 20px;
-  box-shadow: 2px 2px 2px #aaa;
+  box-shadow: 3px 3px 2px var(--adidas--dark--grey);
 }
 
 #contact {
-  background-color: #ffc6ff;
+  background-color: var(--adidas--dark--purple);
+  color: var(--adidas--grey);
+  color: var(--adidas--green);
 }
 
 
 footer {
   height: 100px;
-  background-color: #caffbf;
+  background-color: var(--adidas--green);
   padding: 30px;
   clear: both;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   text-align: center;
-  color: #000000;
 }
 
 
@@ -149,7 +179,7 @@ footer {
   }
 
   .aside h2 {
-    border-bottom: 2px solid blue;
+    border-bottom: 2px solid var(--adidas--green);
   }
 }
 
