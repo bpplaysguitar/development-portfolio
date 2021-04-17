@@ -29,8 +29,13 @@ h2 {
   font-size: 1.5rem;
   padding-bottom: 5px;
   margin-bottom: 1em;
-  font-weight: 500;
+  font-weight: 600;
   text-transform: lowercase;
+}
+
+h4 {
+  font-size: 1.12rem;
+  font-weight: 600;
 }
 
 header {
