@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+
 * {
   box-sizing: border-box;
 }
@@ -13,7 +15,7 @@
 }
 
 body {
-  font-family: Arial;
+  font-family: Poppins;
   display: flex;
   flex-direction: column;
   min-height: 100vh;
@@ -25,6 +27,10 @@ h1 {
 
 h2 {
   font-size: 1.5rem;
+  padding-bottom: 5px;
+  margin-bottom: 1em;
+  font-weight: 500;
+  text-transform: lowercase;
 }
 
 header {
@@ -35,16 +41,28 @@ header {
   align-items: center;
 }
 
+nav::before {
+  position: absolute;
+  left: 40px;
+  content: "Brian Palay";
+  font-size: 1.5em;
+  color: var(--adidas--green);
+  border-radius: 20px;
+  font-weight: 600;
+  text-transform: lowercase;
+  }
+
 nav ul {
   list-style: none;
   display: flex;
   position: relative;
   right: 30px;
+  text-transform: lowercase;
 }
 
 nav a {
   color: var(--adidas--white);
-  padding: 10px 25px;
+  padding: 5px 20px;
   text-decoration: none;
   text-align: center;
   font-weight: 600;
@@ -62,17 +80,11 @@ nav a:hover {
   height: 400px;
   width: 100%;
   background-image: url("../images/glitchbp.jpg");
+  opacity: .75;
   background-size: cover;
-  /* background-position: center; */
   background-repeat:no-repeat;
   background-position-y:25%;
 } 
-
-#hero h1 {
-  position: absolute;
-  bottom: 10px;
-  right: 10px;
-  }
 
 .flex-container {
   display: flex;
@@ -150,7 +162,7 @@ width: 100%;
 
 
 footer {
-  height: 100px;
+  height: 80px;
   background-color: var(--adidas--green);
   padding: 30px;
   clear: both;
@@ -179,7 +191,7 @@ footer {
   }
 
   .aside h2 {
-    border-bottom: 2px solid var(--adidas--green);
+    border-bottom: 4px solid var(--adidas--green);
   }
 }
 
