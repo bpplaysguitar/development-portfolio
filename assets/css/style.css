@@ -129,7 +129,7 @@ nav a:hover {
 display: flex;
 }
 
-#works-flex-container-bottom {
+#works-grid-container-bottom {
 display: grid;
 grid-template-columns: 1fr 1fr;
 flex-wrap: wrap;
@@ -179,7 +179,7 @@ footer {
 
 @media only screen and (max-width:680px) {
 
-  #works-flex-container-bottom {
+  #works-grid-container-bottom {
     grid-template-columns: 1fr;
     }
 
@@ -199,7 +199,7 @@ footer {
 
 @media only screen and (min-width:681px) {
 
-  #works-flex-container-bottom {
+  #works-grid-container-bottom {
     grid-template-columns: 1fr 1fr;
     }
 
