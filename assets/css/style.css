@@ -121,25 +121,23 @@ nav a:hover {
 
 .works-flex-container {
   display: grid;
-  flex-direction: row;
+  /* flex-direction: row; */
   flex-wrap: wrap;
 }
 
-#works-flex-container-top {
-display: flex;
+#works-grid-container-top {
+display: grid;
 }
 
 #works-grid-container-bottom {
 display: grid;
 grid-template-columns: 1fr 1fr;
-flex-wrap: wrap;
-width: 100%;
 }
 
 #work-1 {
   background-color: #aaa;
   height: 250px;
-  width:100%;
+  grid-template-columns: 1fr;
   margin:20px;
   border: 6px solid var(--adidas-black);
   border-radius: 20px;
@@ -151,7 +149,6 @@ width: 100%;
   text-align: center;
   background-color: #aaa;
   height: 100px;
-  flex: 1 0 200px;
   margin:20px;
   border: 6px solid var(--adidas-black);
   border-radius: 20px;
@@ -177,7 +174,7 @@ footer {
 
 /* MEDIA QUERIES */
 
-@media only screen and (max-width:680px) {
+/* @media only screen and (max-width:680px) {
 
   #works-grid-container-bottom {
     grid-template-columns: 1fr;
@@ -216,23 +213,4 @@ footer {
   }
 
 }
-
-@media only screen and (min-width:681px) {
-
-  #works-flex-container-bottom {
-    grid-template-columns: 1fr 1fr;
-    }
-
-  .flex-container {
-    flex-direction: row;
-  }
-
-  .aside {
-    display: flex;
-    justify-content: flex-end;
-    padding:5px 15px 0px 15px;
-    flex:1;
-    border-right: 4px solid var(--adidas-green);
-  }
-
-}
+ */
