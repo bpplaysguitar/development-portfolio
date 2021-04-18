@@ -5,13 +5,13 @@
 }
 
 :root {
-  --adidas--grey: hsl(337, 0%, 73%);
-  --adidas--green: hsl(175, 66%, 76%);
-  --adidas--purple: hsl(296, 36%, 40%);
-  --adidas--dark--grey: hsl(337, 0%, 63%);
-  --adidas--black: hsl(300, 0%, 15%);
-  --adidas--dark--purple:hsl(276, 47%, 23%);
-  --adidas--white: hsl(255, 45%, 98%);
+  --adidas-grey: hsl(337, 0%, 73%);
+  --adidas-green: hsl(175, 66%, 76%);
+  --adidas-purple: hsl(296, 36%, 40%);
+  --adidas-dark-grey: hsl(337, 0%, 63%);
+  --adidas-black: hsl(300, 0%, 15%);
+  --adidas-dark-purple:hsl(276, 47%, 23%);
+  --adidas-white: hsl(255, 45%, 98%);
 }
 
 body {
@@ -40,7 +40,7 @@ h4 {
 
 header {
   height: 60px;
-  background-color: var(--adidas--black);
+  background-color: var(--adidas-black);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -51,7 +51,7 @@ nav::before {
   left: 40px;
   content: "Brian Palay";
   font-size: 1.5em;
-  color: var(--adidas--green);
+  color: var(--adidas-green);
   border-radius: 20px;
   font-weight: 600;
   text-transform: lowercase;
@@ -66,7 +66,7 @@ nav ul {
 }
 
 nav a {
-  color: var(--adidas--white);
+  color: var(--adidas-white);
   padding: 5px 20px;
   text-decoration: none;
   text-align: center;
@@ -75,7 +75,7 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--adidas--purple);
+  background-color: var(--adidas-purple);
   transition: all .2s ease;
   cursor:pointer;
 }
@@ -101,7 +101,7 @@ nav a:hover {
   justify-content: flex-end;
   padding:5px 15px 0px 15px;
   flex:1;
-  border-right: 4px solid var(--adidas--green);
+  border-right: 4px solid var(--adidas-green);
 }
 
 .main {
@@ -110,29 +110,28 @@ nav a:hover {
 }
 
 #about {
-  background-color:var(--adidas--purple);
-  color: var(--adidas--white);
+  background-color:var(--adidas-purple);
+  color: var(--adidas-white);
 } 
 
 #works {
-  background-color: var(--adidas--grey);
-  color: var(--adidas--black);
+  background-color: var(--adidas-grey);
+  color: var(--adidas-black);
 }
 
 .works-flex-container {
-  display: flex;
+  display: grid;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
 #works-flex-container-top {
 display: flex;
-flex-wrap: wrap;
-width: 100%;
 }
 
 #works-flex-container-bottom {
-display: flex;
+display: grid;
+grid-template-columns: 1fr 1fr;
 flex-wrap: wrap;
 width: 100%;
 }
@@ -142,10 +141,10 @@ width: 100%;
   height: 250px;
   width:100%;
   margin:20px;
-  border: 6px solid var(--adidas--black);
+  border: 6px solid var(--adidas-black);
   border-radius: 20px;
   text-align: center;
-  box-shadow: 3px 3px 2px var(--adidas--dark--grey);
+  box-shadow: 3px 3px 2px var(--adidas-dark-grey);
 }
 
 .work-small {
@@ -154,21 +153,21 @@ width: 100%;
   height: 100px;
   flex: 1 0 200px;
   margin:20px;
-  border: 6px solid var(--adidas--black);
+  border: 6px solid var(--adidas-black);
   border-radius: 20px;
-  box-shadow: 3px 3px 2px var(--adidas--dark--grey);
+  box-shadow: 3px 3px 2px var(--adidas-dark-grey);
 }
 
 #contact {
-  background-color: var(--adidas--dark--purple);
-  color: var(--adidas--grey);
-  color: var(--adidas--green);
+  background-color: var(--adidas-dark-purple);
+  color: var(--adidas-grey);
+  color: var(--adidas-green);
 }
 
 
 footer {
   height: 80px;
-  background-color: var(--adidas--green);
+  background-color: var(--adidas-green);
   padding: 30px;
   clear: both;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -178,13 +177,11 @@ footer {
 
 /* MEDIA QUERIES */
 
+@media only screen and (max-width:680px) {
 
-
-@media only screen and (max-width:683px) {
-
-  #work-1, #work-2, #work-3, #work-4, #work-5 {
-    flex: 1 1 400px;
-  }
+  #works-flex-container-bottom {
+    grid-template-columns: 1fr;
+    }
 
   .flex-container {
     flex-direction: column;
@@ -196,32 +193,46 @@ footer {
   }
 
   .aside h2 {
-    border-bottom: 4px solid var(--adidas--green);
+    border-bottom: 4px solid var(--adidas-green);
   }
 }
 
-@media only screen and (min-width:684px) {
-  
+@media only screen and (min-width:681px) {
+
+  #works-flex-container-bottom {
+    grid-template-columns: 1fr 1fr;
+    }
+
   .flex-container {
     flex-direction: row;
   }
 
-
-}
-
-@media only screen and (min-width:950px) {
-  #work-1, #work-2, #work-3, #work-4, #work-5 {
-    flex: 1 0 300px;
+  .aside {
+    display: flex;
+    justify-content: flex-end;
+    padding:5px 15px 0px 15px;
+    flex:1;
+    border-right: 4px solid var(--adidas-green);
   }
 
 }
 
+@media only screen and (min-width:681px) {
 
+  #works-flex-container-bottom {
+    grid-template-columns: 1fr 1fr;
+    }
 
-@media only screen and (min-width:1150px) {
-  #work-2, #work-3, #work-4, #work-5 {
-    flex: 1 0 150px;
+  .flex-container {
+    flex-direction: row;
+  }
+
+  .aside {
+    display: flex;
+    justify-content: flex-end;
+    padding:5px 15px 0px 15px;
+    flex:1;
+    border-right: 4px solid var(--adidas-green);
   }
 
 }
- 
