@@ -19,6 +19,7 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  line-height: 1.5;
 }
 
 h1 {
@@ -34,7 +35,7 @@ h2 {
 }
 
 h4 {
-  font-size: 1.12rem;
+  font-size: .9rem;
   font-weight: 600;
 }
 
@@ -112,7 +113,12 @@ nav a:hover {
 #about {
   background-color:var(--adidas-purple);
   color: var(--adidas-white);
+  align-items: center;
 } 
+
+#about p {
+  margin: 0 20px;
+}
 
 #works {
   background-color: var(--adidas-grey);
@@ -134,7 +140,7 @@ grid-template-columns: 1fr 1fr;
 
 #work-1 {
   background-color: #aaa;
-  height: 250px;
+  height: 300px;
   grid-template-columns: 1fr;
   margin:20px;
   border: 6px solid var(--adidas-black);
@@ -144,21 +150,53 @@ grid-template-columns: 1fr 1fr;
 }
 
 .work-small {
+  color: var(--adidas-green);
   text-align: center;
   background-color: #aaa;
-  height: 100px;
+  height: 150px;
   margin:20px;
   border: 6px solid var(--adidas-black);
   border-radius: 20px;
   box-shadow: 3px 3px 2px var(--adidas-dark-grey);
+  position: relative;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position-y: top;
+}
+
+.work-small-text {
+  font-size: 0.85rem;
+  position: absolute;
+  background: var(--adidas-black);
+  padding: 9px;
+  bottom: 2px;
+  left: 2px;
+  border-radius: 15px;
+}
+
+#work-2 {
+  background-image: url("/assets/images/wheresthatcard.jpg");
 }
 
 #contact {
   background-color: var(--adidas-dark-purple);
   color: var(--adidas-grey);
   color: var(--adidas-green);
+  text-align: center;
+  align-items: center;
 }
 
+#contact a {
+  color: var(--adidas-green);
+  margin: 20px;
+  transition-property: color;
+}
+
+#contact a:hover {
+  color: var(--adidas-purple);
+  transition: .2s all ease;
+}
 
 footer {
   height: 80px;
@@ -172,7 +210,7 @@ footer {
 
 /* MEDIA QUERIES */
 
-  @media only screen and (max-width:680px) {
+  @media only screen and (max-width:699px) {
 
   #works-grid-container-bottom {
     grid-template-columns: 1fr;
@@ -192,7 +230,7 @@ footer {
   }
 }
 
-  @media only screen and (min-width:681px) {
+  @media only screen and (min-width:700px) {
 
   #works-grid-container-bottom {
     grid-template-columns: 1fr 1fr;
@@ -212,7 +250,7 @@ footer {
 
 }
 
-@media only screen and (min-width:1100px) {
+@media only screen and (min-width:1350px) {
 
   #works-grid-container-bottom {
     grid-template-columns: 1fr 1fr 1fr 1fr;
