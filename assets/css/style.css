@@ -176,7 +176,7 @@ grid-template-columns: 1fr 1fr;
 }
 
 #work-2 {
-  background-image: url("/assets/images/wheresthatcard.jpg");
+  background-image: url("../images/wheresthatcard.jpg");
 }
 
 #contact {
