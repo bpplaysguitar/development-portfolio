@@ -168,6 +168,12 @@ h4 {
   grid-template-columns: 1fr;
   margin: 7px;
   border: 4px solid var(--borders-backgrounds-green);
+  background-image: url("../images/wheresthatcard.jpg");
+}
+
+#work-1:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, .25);
+  transition: .2s all ease;
 }
 
 .work-small {
@@ -180,6 +186,11 @@ h4 {
   background-size: cover;
   background-repeat: no-repeat;
   background-position-y: top;
+}
+
+.work-small:hover {
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, .25);
+  transition: .2s all ease;
 }
 
 .work-text {
