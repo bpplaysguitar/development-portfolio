@@ -225,6 +225,20 @@ h4 {
   white-space: nowrap;
 }
 
+/* RESUME PAGE */
+
+#resume-page-main {
+display: flex;
+}
+
+#resume-frame {
+  width: 90%;
+  height: 90vh;
+  margin: 30px auto;
+  border: 8px solid var(--maintext-borders-darkslateblue);
+  border-radius: 7px;
+}
+
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 699px) {
