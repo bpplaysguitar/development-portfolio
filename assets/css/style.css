@@ -19,18 +19,6 @@ body {
   line-height: 1.5;
 }
 
-h2 {
-  font-size: 1.5rem;
-  padding-bottom: 5px;
-  margin-bottom: 1em;
-  font-weight: 600;
-}
-
-h4 {
-  font-size: 1rem;
-  font-weight: 600;
-}
-
 /* HEADER / NAV */
 
 header {
@@ -41,16 +29,21 @@ header {
   align-items: center;
 }
 
-nav::before {
+header h1 a {
   position: absolute;
   left: 0px;
   top: 12px;
   padding: 0px 10px 0px 40px;
-  content: "Brian Palay";
   font-size: 2em;
   color: var(--header-grey);
   background-color: var(--borders-backgrounds-green);
   font-weight: 600;
+  text-decoration: none;
+}
+
+header h1:hover {
+  cursor: pointer;
+
 }
 
 nav ul {
@@ -62,19 +55,19 @@ nav ul {
 
 nav a {
   color: var(--borders-backgrounds-green);
-  background-color:var(--header-grey) ;
+  background-color: var(--header-grey);
   padding: 3px 7px;
   text-decoration: none;
   text-align: center;
   font-weight: 500;
   margin: 5px;
   border-bottom: 3px solid var(--borders-backgrounds-green);
-  border-radius: 10px 10px 0 0;
+  border-radius: 5px 5px 0 0;
 }
 
 nav a:hover {
   background-color: var(--maintext-borders-darkslateblue);
-  transition: all 0.2s ease;
+  transition: all 0.3s ease;
   cursor: pointer;
 }
 
@@ -82,6 +75,22 @@ nav a:hover {
 
 .main-body {
   background-color: var(--body-whitesmoke);
+}
+
+h2 {
+  font-size: 1.45rem;
+  padding-bottom: 5px;
+  font-weight: 600;
+}
+
+/* REMOVE NON-WRAPPED HEADINGS UNTIL NEEDED ON SMALL SCREENS */
+.onelineheading {
+  display: none;
+}
+
+h4 {
+  font-size: 1rem;
+  font-weight: 600;
 }
 
 #hero {
@@ -97,16 +106,17 @@ nav a:hover {
 }
 
 #hero h3 {
-  font-size: 2rem;
+  font-size: 1.75rem;
   background-color: var(--borders-backgrounds-green);
   margin: 0 55px 15px 0;
   padding: 0px 10px;
   color: var(--header-grey);
+  font-weight: 600;
 }
 
 .flex-container {
   display: flex;
-  padding: 15px;
+  padding: 15px 5px;
 }
 
 /* FOR ALL SECTIONS, HEADING ON LEFT (TOP FOR SMALL SCREENS), MAIN CONTENT ON RIGHT (BOTTOM FOR SMALL SCREENS) */
@@ -115,6 +125,7 @@ nav a:hover {
   display: flex;
   justify-content: flex-end;
   padding: 5px 15px 0px 15px;
+  margin-left: 10px;
   flex: 1;
   text-align: right;
   color: var(--maintext-borders-darkslateblue);
@@ -136,7 +147,7 @@ nav a:hover {
 }
 
 #aboutme p {
-  margin: 20px 0;
+  margin: 10px 0 10px 0;
 }
 
 /* WORK */
@@ -188,7 +199,7 @@ nav a:hover {
 
 #contactme ul {
   display: flex;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
   line-height: 3em;
 }
@@ -199,12 +210,14 @@ nav a:hover {
   color: var(--work-contact-text-darkslategrey);
   text-decoration: none;
   border-bottom: 3px solid var(--maintext-borders-darkslateblue);
-  transition-property: color;
+  border-radius: 5px 5px 0 0;
+  padding: 3px 7px;
 }
 
 #contactme a:hover {
-  color: var(--adidas-purple);
-  transition: 0.2s all ease;
+  cursor: pointer;
+  background-color: var(--borders-backgrounds-green);
+  transition: 0.3s all ease;
 }
 
 /* PREVENT PHONE # FROM WRAPPING */
@@ -215,28 +228,58 @@ nav a:hover {
 /* MEDIA QUERIES */
 
 @media only screen and (max-width: 699px) {
+  /* REMOVE TWO LINE HEADINGS AND PLACE ONE LINE HEADINGS FOR SMALL SCREENS */
+
+  .onelineheading {
+    display: initial;
+  }
+
+  .twolineheading {
+    display: none;
+  }
+
+  #main-nav {
+    display: none;
+  }
+
+  #hero h3 {
+    font-size: 1.4rem;
+  }
+  .heading {
+    justify-content: flex-start;
+    border-right: none;
+  }
+  
+  .heading h2 {
+    border-bottom: 4px solid var(--maintext-borders-darkslateblue);
+    margin-bottom: 1em;
+  }
+
   #work-grid-container-bottom {
     grid-template-columns: 1fr;
   }
 
   .flex-container {
     flex-direction: column;
-  }
+  }  
 
-  .heading {
-    justify-content: flex-start;
-    border-right: none;
-  }
-
-  .heading h2 {
-    border-bottom: 4px solid var(--maintext-borders-darkslateblue);
+  #contactme ul {
+    flex-direction: column;
+    line-height: 3.5em;
   }
 
   #contactme a {
     border-bottom: none;
-    background-color: var(--borders-backgrounds-green);
-    padding: 10px;
-    border-radius: 7px;
+    background-color: var(--maintext-borders-darkslateblue);
+    color: var(--body-whitesmoke);
+    padding: 8px 10px;
+    border-radius: 10px;
+  }
+
+  #contactme a:hover {
+    cursor: pointer;
+    background-color: hsl(181, 37%, 49%);
+    transition: 0.3s all ease;
   }
 }
 
@@ -248,17 +291,9 @@ nav a:hover {
   .flex-container {
     flex-direction: row;
   }
-
-  .heading {
-    font-size:1em ;
-    display: flex;
-    justify-content: flex-end;
-    padding: 5px 15px 0px 15px;
-    border-right: 4px solid var(--maintext-borders-darkslateblue);
-  }
 }
 
-@media only screen and (min-width:1000px) {
+@media only screen and (min-width: 900px) {
   .heading {
     flex: 1;
   }

@@ -1,64 +1,135 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Brian Palay Resume</title>
-  <link rel="stylesheet" href="./assets/css/reset.css">
-  <link rel="stylesheet" href="./assets/css/style.css">
-</head>
-<body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="index.html#about">About</a></li>
-        <li><a href="index.html#works">Works</a></li>
-        <li><a href="index.html#contact">Contact</a></li>
-        <li><a href="resume.html">Resume</a></li>
-      </ul>
-    </nav>
-  </header>
-  <div id="hero"></div>
-  <section class="flex-container" id="about">
-    <div class="aside">
-      <h2>About</h2>
-    </div>
-    <div class="main">
-      <p>About content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem inventore quia, earum ea aut facilis! Ipsum quos non voluptates porro.</p>
-    </div>
-  </section>
-
-  <section class="flex-container" id="works">
-    <div class="aside">
-      <h2>Works</h2>
-    </div>
-    <div class="main works-flex-container">
-      <div id="works-flex-container-top">
-      <div id="work-1"><h3>Project Title</h3></div>
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Brian Palay Development Portfolio</title>
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <nav>
+        <ul id="main-nav">
+          <li><a href="#aboutme">About Me</a></li>
+          <li><a href="#work">Work</a></li>
+          <li><a href="#contactme">Contact Me</a></li>
+          <li><a href="resume.html">Resume</a></li>
+        </ul>
+      </nav>
+    </header>
+    <main class="main-body">
+      <div id="hero">
+        <h3>Cool subtitle here!</h3>
       </div>
-        <div id="works-flex-container-bottom">
-          <div class="work-small" id="work-2">Project Title</div>
-          <div class="work-small" id="work-3">Project Title</div>
-          <div class="work-small" id="work-4">Project Title</div>
-          <div class="work-small" id="work-5">Project Title</div>
-       </div>
-    </div>
-  </section>
+      <section class="flex-container" id="aboutme">
+        <div class="heading">
+          <h2 class="onelineheading">
+            About Me
+          </h2>
+          <h2 class="twolineheading">
+            About <br> Me
+          </h2>
+        </div>
+        <div class="main-content">
+          <p>
+            About content here. Lorem ipsum dolor sit amet, consectetur
+            adipisicing elit. Exercitationem inventore quia, earum ea aut
+            facilis! Ipsum quos non voluptates porro.
+          </p>
 
-  <section class="flex-container" id="contact">
-    <div class="aside">
-      <h2>Contact</h2>
-    </div>
-    <div class="main">
-      <p>Contact Me content here. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Exercitationem inventore quia, earum ea aut facilis! Ipsum quos non voluptates porro.</p>
-    </div>
-  </section>
-  <footer id="footer">
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quis,
+            possimus recusandae placeat dolore libero, magni officia
+            reprehenderit, dignissimos eum nobis quidem porro, aliquid
+            reiciendis obcaecati? Esse porro officiis ipsa! Facere ad doloremque
+            asperiores officiis nihil. Doloremque numquam error explicabo quos
+            voluptatem possimus blanditiis?.
+          </p>
+        </div>
+      </section>
 
-  </footer>
-
-
-</body>
+      <section class="flex-container" id="work">
+        <div class="heading">
+          <h2>Work</h2>
+        </div>
+        <div class="main-content work-flex-container">
+          <div id="work-grid-container-top">
+            <div id="work-1">
+              <div class="work-text">
+                <h4>Where's That Card?</h4>
+                <p>JavaScript</p>
+              </div>
+            </div>
+          </div>
+          <div id="work-grid-container-bottom">
+            <a
+              href="https://bpplaysguitar.github.io/wheresthatcard/"
+              target="_blank"
+              class="work-small"
+              id="work-2"
+            >
+              <div class="work-text">
+                <h4>Where's That Card?</h4>
+                <p>JavaScript</p>
+              </div>
+            </a>
+            <a
+              href="https://bpplaysguitar.github.io/wheresthatcard/"
+              target="_blank"
+              class="work-small"
+              id="work-2"
+            >
+              <div class="work-text">
+                <h4>Where's That Card?</h4>
+                <p>JavaScript</p>
+              </div>
+            </a>
+            <a
+              href="https://bpplaysguitar.github.io/wheresthatcard/"
+              target="_blank"
+              class="work-small"
+              id="work-2"
+            >
+              <div class="work-text">
+                <h4>Where's That Card?</h4>
+                <p>JavaScript</p>
+              </div>
+            </a>
+            <a
+              href="https://bpplaysguitar.github.io/wheresthatcard/"
+              target="_blank"
+              class="work-small"
+              id="work-2"
+            >
+              <div class="work-text">
+                <h4>Where's That Card?</h4>
+                <p>JavaScript</p>
+              </div>
+            </a>
+          </div>
+        </div>
+      </section>
+      <section class="flex-container" id="contactme">
+        <div class="heading">
+          <h2 class="onelineheading">
+            Contact Me
+          </h2>
+          <h2 class="twolineheading">
+            Contact <br> Me
+          </h2>
+        </div>
+        <div class="main-content">
+          <ul>
+          <li></l><a href="tel:612-202-5710"> <span class="nowrap">612-202-5710</span></a></li>
+          <li></l><a href="mailto:brianpalay@gmail.com">brianpalay@gmail.com</a></li>
+          <li></l><a href="https://github.com/bpplaysguitar" target="_blank">GitHub</a></li>
+          <li></l><a href="https://instagram.com/brianpalay" target="_blank">Instagram</a></li>
+          <li><a href="https://facebook.com/brianpalay" target="_blank">Facebook</a></li>
+        </ul>
+        </div>
+      </section>
+    </main>
+  </body>
 </html>
