@@ -5,7 +5,12 @@
 }
 
 :root {
-  --adidas-grey: hsl(337, 0%, 73%);
+  --borders-backgrounds-green:#92cccd;
+  --header-grey:#31343d;
+  --body-whitesmoke:#eeeef6;
+  --maintext-borders-darkslateblue: #445876;
+  --work-contact-text-darkslategrey:#333540;
+
   --adidas-green: hsl(175, 66%, 76%);
   --adidas-purple: hsl(296, 36%, 40%);
   --adidas-dark-grey: hsl(337, 0%, 63%);
@@ -35,13 +40,13 @@ h2 {
 }
 
 h4 {
-  font-size: .9rem;
+  font-size: 1rem;
   font-weight: 600;
 }
 
 header {
-  height: 60px;
-  background-color: var(--adidas-black);
+  height: 70px;
+  background-color: var(--header-grey);
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -49,13 +54,14 @@ header {
 
 nav::before {
   position: absolute;
-  left: 40px;
+  left: 0px;
+  top:12px;
+  padding: 0px 10px 0px 40px;
   content: "Brian Palay";
-  font-size: 1.5em;
-  color: var(--adidas-green);
-  border-radius: 20px;
+  font-size: 2em;
+  color: var(--header-grey);
+  background-color: var(--borders-backgrounds-green);
   font-weight: 600;
-  text-transform: lowercase;
   }
 
 nav ul {
@@ -63,11 +69,10 @@ nav ul {
   display: flex;
   position: relative;
   right: 30px;
-  text-transform: lowercase;
 }
 
 nav a {
-  color: var(--adidas-white);
+  color: var(--borders-backgrounds-green);
   padding: 5px 20px;
   text-decoration: none;
   text-align: center;
@@ -105,59 +110,49 @@ nav a:hover {
   border-right: 4px solid var(--adidas-green);
 }
 
-.main {
+.main-content {
   padding:0px 15px 0px 15px;
   flex:6;
 }
 
-#about {
+#aboutme {
   background-color:var(--adidas-purple);
   color: var(--adidas-white);
   align-items: center;
 } 
 
-#about p {
+#aboutme p {
   margin: 0 20px;
 }
 
-#works {
+#work {
   background-color: var(--adidas-grey);
   color: var(--adidas-black);
 }
 
-.works-flex-container {
-  /* display: grid; */
-}
-
-#works-grid-container-top {
+#work-grid-container-top {
 display: grid;
 }
 
-#works-grid-container-bottom {
+#work-grid-container-bottom {
 display: grid;
 grid-template-columns: 1fr 1fr;
 }
 
 #work-1 {
-  background-color: #aaa;
-  height: 300px;
+  color: var(--work-contact-text-darkslategrey);
+  position: relative;
+  height: 263px;
   grid-template-columns: 1fr;
   margin:20px;
-  border: 6px solid var(--adidas-black);
-  border-radius: 20px;
-  text-align: center;
-  box-shadow: 3px 3px 2px var(--adidas-dark-grey);
+  border: 4px solid var(--borders-backgrounds-green);
 }
 
 .work-small {
-  color: var(--adidas-green);
-  text-align: center;
-  background-color: #aaa;
-  height: 150px;
+  color: var(--work-contact-text-darkslategrey);
+  height: 120px;
   margin:20px;
-  border: 6px solid var(--adidas-black);
-  border-radius: 20px;
-  box-shadow: 3px 3px 2px var(--adidas-dark-grey);
+  border: 4px solid var(--borders-backgrounds-green);
   position: relative;
   background-position: center;
   background-size: cover;
@@ -165,21 +160,20 @@ grid-template-columns: 1fr 1fr;
   background-position-y: top;
 }
 
-.work-small-text {
-  font-size: 0.85rem;
+.work-text {
+  font-size: 0.75rem;
   position: absolute;
-  background: var(--adidas-black);
+  background: var(--borders-backgrounds-green);
   padding: 9px;
-  bottom: 2px;
-  left: 2px;
-  border-radius: 15px;
+  bottom: 10px;
+  left: -2px;
 }
 
 #work-2 {
   background-image: url("../images/wheresthatcard.jpg");
 }
 
-#contact {
+#contactme {
   background-color: var(--adidas-dark-purple);
   color: var(--adidas-grey);
   color: var(--adidas-green);
@@ -187,24 +181,15 @@ grid-template-columns: 1fr 1fr;
   align-items: center;
 }
 
-#contact a {
+#contactme a {
   color: var(--adidas-green);
   margin: 20px;
   transition-property: color;
 }
 
-#contact a:hover {
+#contactme a:hover {
   color: var(--adidas-purple);
   transition: .2s all ease;
-}
-
-footer {
-  height: 80px;
-  background-color: var(--adidas-green);
-  padding: 30px;
-  clear: both;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  text-align: center;
 }
 
 
@@ -212,7 +197,7 @@ footer {
 
   @media only screen and (max-width:699px) {
 
-  #works-grid-container-bottom {
+  #work-grid-container-bottom {
     grid-template-columns: 1fr;
     }
 
@@ -220,19 +205,19 @@ footer {
     flex-direction: column;
   }
 
-  .aside {
+  .heading {
     justify-content: flex-start;
     border-right: none;
   }
 
-  .aside h2 {
+  .heading h2 {
     border-bottom: 4px solid var(--adidas-green);
   }
 }
 
   @media only screen and (min-width:700px) {
 
-  #works-grid-container-bottom {
+  #work-grid-container-bottom {
     grid-template-columns: 1fr 1fr;
     }
 
@@ -240,7 +225,7 @@ footer {
       flex-direction: row;
     }
 
-  .aside {
+  .heading {
     display: flex;
     justify-content: flex-end;
     padding:5px 15px 0px 15px;
@@ -252,7 +237,7 @@ footer {
 
 @media only screen and (min-width:1350px) {
 
-  #works-grid-container-bottom {
+  #work-grid-container-bottom {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }
