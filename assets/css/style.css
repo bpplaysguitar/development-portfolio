@@ -269,7 +269,7 @@ h4 {
 
   nav ul {
     position: absolute;
-    right: 50px;
+    right: 40px;
     top: 15px;
     flex-direction: column;
     line-height: 2.5em;
