@@ -43,7 +43,6 @@ header h1 a {
 
 header h1:hover {
   cursor: pointer;
-
 }
 
 nav ul {
@@ -56,13 +55,13 @@ nav ul {
 nav a {
   color: var(--borders-backgrounds-green);
   background-color: var(--header-grey);
-  padding: 3px 7px;
+  padding: 6px 9px;
   text-decoration: none;
   text-align: center;
   font-weight: 500;
   margin: 5px;
   border-bottom: 3px solid var(--borders-backgrounds-green);
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
 }
 
 nav a:hover {
@@ -172,8 +171,8 @@ h4 {
 }
 
 #work-1:hover {
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, .25);
-  transition: .2s all ease;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+  transition: 0.2s all ease;
 }
 
 .work-small {
@@ -189,8 +188,8 @@ h4 {
 }
 
 .work-small:hover {
-  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, .25);
-  transition: .2s all ease;
+  box-shadow: inset 0 0 100px 100px rgba(255, 255, 255, 0.25);
+  transition: 0.2s all ease;
 }
 
 .work-text {
@@ -221,7 +220,7 @@ h4 {
   color: var(--work-contact-text-darkslategrey);
   text-decoration: none;
   border-bottom: 3px solid var(--maintext-borders-darkslateblue);
-  border-radius: 5px 5px 0 0;
+  border-radius: 3px 3px 0 0;
   padding: 3px 7px;
 }
 
@@ -239,7 +238,7 @@ h4 {
 /* RESUME PAGE */
 
 #resume-page-main {
-display: flex;
+  display: flex;
 }
 
 #resume-frame {
@@ -262,10 +261,33 @@ display: flex;
   .twolineheading {
     display: none;
   }
+  /* MAKE THE NAV MOBILE FRIENDLY - BEGINNING */
 
-  #main-nav {
-    display: none;
+  header {
+    height: 180px;
   }
+
+  nav ul {
+    position: absolute;
+    right: 70px;
+    top: 10px;
+    flex-direction: column;
+    line-height: 2.5em;
+    text-align: center;
+  }
+
+  nav a {
+    border-bottom: none;
+    border-radius: 5px;
+    padding: 10px;
+  }
+
+  nav a:hover {
+    background-color: var(--maintext-borders-darkslateblue);
+    transition: all 0.3s ease;
+    cursor: pointer;
+  }
+  /* MAKE THE NAV MOBILE FRIENDLY - END */
 
   #hero h3 {
     font-size: 1.4rem;
@@ -274,7 +296,7 @@ display: flex;
     justify-content: flex-start;
     border-right: none;
   }
-  
+
   .heading h2 {
     border-bottom: 4px solid var(--maintext-borders-darkslateblue);
     margin-bottom: 1em;
@@ -286,7 +308,7 @@ display: flex;
 
   .flex-container {
     flex-direction: column;
-  }  
+  }
 
   #contactme ul {
     flex-direction: column;
